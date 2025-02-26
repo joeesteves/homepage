@@ -12,7 +12,8 @@
 
   .header {
     h1 {
-      margin: 0;
+      margin: 0em;
+      margin-bottom: 0.2em;
       font-weight: 300;
     }
 
@@ -27,7 +28,7 @@
     .logo {
       height: 6em;
       border-radius: 30%;
-      padding: 1.5em;
+      padding: 1em 0em 0em 0em;
       will-change: filter;
       transition: filter 300ms;
     }
@@ -48,6 +49,33 @@
       to {
         transform: rotate(360deg);
       }
+    }
+
+    .header__social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+
+      a {
+        color: #888;
+        text-decoration: none;
+      }
+
+      a:hover {
+        filter: brightness(0.5);
+        transition: filter 300ms;
+      }
+    }
+  }
+
+  .section {
+    text-align: justify;
+    font-weight: 100;
+
+    .section__header {
+      display: flex;
+      align-items: center;
+      gap: 1em;
     }
   }
 }
