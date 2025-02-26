@@ -8,9 +8,11 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 
   .header {
+    align-self: center;
+
     h1 {
       margin: 0em;
       margin-bottom: 0.2em;
