@@ -14,13 +14,11 @@
     align-self: center;
 
     h1 {
-      margin: 0em;
       margin-bottom: 0.2em;
       font-weight: 300;
     }
 
     h5 {
-      margin: 0;
       color: #888;
       font-family: monospace;
       font-variant: small-caps;
@@ -72,12 +70,40 @@
 
   .section {
     text-align: justify;
+    font-size: 1.1em;
     font-weight: 100;
+
+    .section__description {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .stack-badge {
+      display: flex;
+      flex-direction: row;
+      height: 2em;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1em;
+      font-weight: 350;
+      border-radius: 0.7em;
+      border: 1px solid rgba(120, 120, 120, 0.3);
+      padding: 0.5em;
+      background-color: rgba(120, 120, 120, 0.1);
+
+      img {
+        height: 1.2em;
+      }
+    }
 
     .section__header {
       display: flex;
       align-items: center;
       gap: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
   }
 }

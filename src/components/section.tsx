@@ -1,25 +1,51 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBoxesStacked, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBoxesStacked,
+  faUser,
+  faWrench,
+} from "@fortawesome/free-solid-svg-icons";
 import { JSX } from "react";
 
 const availableIcons = {
   github: faGithub,
   user: faUser,
   stack: faBoxesStacked,
+  wrench: faWrench,
 };
+
 export const Section = (props: {
-  icon: keyof typeof availableIcons;
+  icon?: keyof typeof availableIcons;
   title: string;
+  hierarchy?: number;
   description: JSX.Element | string;
 }) => {
+  const hierarchy = props.hierarchy || 1;
+
   return (
     <div className="section">
       <div className="section__header">
-        <FontAwesomeIcon icon={availableIcons[props.icon]} />
-        <h2>{props.title}</h2>
+        {props.icon && <FontAwesomeIcon icon={availableIcons[props.icon]} />}
+        <div className="section__title">
+          {renderTitle({ title: props.title, hierarchy })}
+        </div>
       </div>
-      <p>{props.description}</p>
+      {props.description}
     </div>
   );
+};
+
+const renderTitle = ({
+  title,
+  hierarchy,
+}: {
+  title: string;
+  hierarchy: number;
+}) => {
+  switch (hierarchy) {
+    case 2:
+      return <h3>{title}</h3>;
+    default:
+      return <h2>{title}</h2>;
+  }
 };
