@@ -7,10 +7,10 @@ export const SectionHardSkills = () => (
     icon={"wrench"}
     title="Hard Skills"
     description={
-      <>
+      <div className="section__description">
         <SectionLang />
         <SectionFrameworks />
-      </>
+      </div>
     }
   />
 );
