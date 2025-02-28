@@ -1,10 +1,10 @@
 import { Section } from "../../section";
-import ror from "@assets/ror.png";
-import phoenix from "@assets/phoenix.png";
+import ror from "@assets/ror.webp";
+import phoenix from "@assets/phoenix.webp";
 import node from "@assets/node.webp";
-import effect from "@assets/effect.png";
-import react from "@assets/react.png";
-import redux from "@assets/redux.png";
+import effect from "@assets/effect.webp";
+import react from "@assets/react.webp";
+import redux from "@assets/redux.webp";
 
 const Stack = (props: { name: string; img: string }) => (
   <>

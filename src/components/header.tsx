@@ -1,4 +1,4 @@
-import profileLogo from "../assets/profile.jpg";
+import profileLogo from "../assets/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
