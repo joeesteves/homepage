@@ -1,9 +1,9 @@
 import { Section } from "../../section";
-import elixir from "@assets/elixir.webp";
-import ruby from "@assets/ruby.webp";
-import ts from "@assets/ts.webp";
-import js from "@assets/js.webp";
-import haskell from "@assets/haskell.webp";
+import elixir from "@assets/images/badges/elixir.webp";
+import ruby from "@assets/images/badges/ruby.webp";
+import ts from "@assets/images/badges/ts.webp";
+import js from "@assets/images/badges/js.webp";
+import haskell from "@assets/images/badges/haskell.webp";
 
 const Stack = (props: { name: string; img: string }) => (
   <>

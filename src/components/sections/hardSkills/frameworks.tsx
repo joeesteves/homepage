@@ -1,10 +1,10 @@
 import { Section } from "../../section";
-import ror from "@assets/ror.webp";
-import phoenix from "@assets/phoenix.webp";
-import node from "@assets/node.webp";
-import effect from "@assets/effect.webp";
-import react from "@assets/react.webp";
-import redux from "@assets/redux.webp";
+import ror from "@assets/images/badges/ror.webp";
+import phoenix from "@assets/images/badges/phoenix.webp";
+import node from "@assets/images/badges/node.webp";
+import effect from "@assets/images/badges/effect.webp";
+import react from "@assets/images/badges/react.webp";
+import redux from "@assets/images/badges/redux.webp";
 
 const Stack = (props: { name: string; img: string }) => (
   <>
