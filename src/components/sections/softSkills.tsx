@@ -3,7 +3,7 @@ import { Stack } from "../stack";
 
 const description = (
   <div className="section__description">
-    <Stack name="Team Player" />
+    <Stack name="Team player" />
     <Stack name="Time managment" />
     <Stack name="Problem solving" />
     <Stack name="Critical thinking" />
