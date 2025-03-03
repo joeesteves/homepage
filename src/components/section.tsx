@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faBoxesStacked,
+  faDroplet,
   faUser,
   faWrench,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +13,7 @@ const availableIcons = {
   user: faUser,
   stack: faBoxesStacked,
   wrench: faWrench,
+  droplet: faDroplet,
 };
 
 export const Section = (props: {

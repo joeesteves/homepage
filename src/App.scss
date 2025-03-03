@@ -73,12 +73,16 @@
     font-size: 1em;
     font-weight: 100;
 
+    &:not(.section .section) {
+      margin-bottom: 1.4em;
+    }
+
     .section__description {
       padding-left: 0.4em;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 0.8em;
     }
 
     .stack-badge {
@@ -86,17 +90,17 @@
       flex-direction: row;
       height: 2em;
       align-items: center;
-      gap: 0.5em;
+      gap: 0.6em;
       font-size: 1em;
       font-weight: 350;
       border-radius: 0.7em;
       border: 1px solid rgba(120, 120, 120, 0.3);
-      padding: 0.5em;
+      padding: 0.5em 0.8em;
       background-color: rgba(120, 120, 120, 0.1);
 
       img {
         height: 1.2em;
-        width: 1.2em;
+        width: auto;
       }
     }
 
