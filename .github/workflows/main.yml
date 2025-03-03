@@ -30,3 +30,14 @@ jobs:
           file: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/homepage:latest
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: "latest"
+
+      - name: Configure Kubeconfig
+        run: echo "${{ secrets.KUBECONFIG }}" | base64 --decode > ~/.kube/config
+
+      - name: Restart Kubernetes Deployment
+        run: |
+          kubectl -n esteves rollout restart deployment homepage
