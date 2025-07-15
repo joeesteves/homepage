@@ -5,6 +5,7 @@ const description = (
   <div className="section__description">
     <Stack name="Team player" />
     <Stack name="Time managment" />
+    <Stack name="Tech leader" />
     <Stack name="Problem solving" />
     <Stack name="Critical thinking" />
     <Stack name="Self learning" />
