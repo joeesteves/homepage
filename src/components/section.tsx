@@ -5,6 +5,7 @@ import {
   faDroplet,
   faUser,
   faWrench,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { JSX } from "react";
 
@@ -14,6 +15,7 @@ const availableIcons = {
   stack: faBoxesStacked,
   wrench: faWrench,
   droplet: faDroplet,
+  star: faStar,
 };
 
 export const Section = (props: {

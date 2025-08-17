@@ -9,9 +9,9 @@ import { Stack } from "../../stack";
 const description = (
   <div className="section__description">
     <Stack name="TypeScript" img={ts} />
+    <Stack name="JavaScript" img={js} />
     <Stack name="Elixir" img={elixir} />
     <Stack name="Ruby" img={ruby} />
-    <Stack name="JavaScript" img={js} />
     <Stack name="Haskell" img={haskell} />
   </div>
 );

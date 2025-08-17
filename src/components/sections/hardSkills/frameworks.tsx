@@ -9,9 +9,9 @@ import { Stack } from "../../stack";
 
 const description = (
   <div className="section__description">
-    <Stack name="NodeJS" img={node} />
-    <Stack name="EffectTs" img={effect} />
     <Stack name="React" img={react} />
+    <Stack name="NodeJS" img={node} />
+    <Stack name="Effect-TS" img={effect} />
     <Stack name="Redux" img={redux} />
     <Stack name="Phoenix" img={phoenix} />
     <Stack name="Ruby on Rails" img={ror} />

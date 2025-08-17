@@ -3,16 +3,16 @@ import { Section } from "../section";
 const description = (
   <div className="section__description">
     <p>
-      I love tackling complex problems and building efficient, scalable solutions. With over a 15 years of experience in software development, I thrive in remote and async environments, where I can focus on delivering real value. I embrace the functional programming paradigm for its clarity, reliability, and ability to model complex domains elegantly. Writing maintainable, high-quality code is a core part of my approach.
+      <strong>Full-Stack Team Lead</strong> with 15+ years of experience building enterprise-scale applications and leading high-performing development teams. As an independent developer, I've built complete solutions from scratch—making critical decisions about tech stack selection, system architecture, and deployment strategies. I specialize in architecting robust solutions across the entire stack, from React frontends with modern state management to Node.js backends with microservices architecture, handling everything from initial coding to production deployment.
     </p>
     <p>
-      I've worked across the entire development lifecycle, often serving as a tech lead. This includes not only designing and implementing new features from scratch, but also ensuring that these solutions are built with maintainability at their core. My extensive experience with large legacy codebases has ingrained in me the importance of writing clean, well-architected code that stands the test of time, minimizing future technical debt and maximizing long-term impact. From initial concept to successful deployment, I prioritize creating robust systems that are easy to understand, extend, and support.  
+      As a technical leader and independent developer, I've successfully guided teams through complex system migrations, legacy code modernization, and greenfield projects. My independent work has given me deep expertise in making architectural decisions under real-world constraints—from choosing the optimal tech stack for specific business requirements to designing scalable deployment pipelines. I champion functional programming principles, type safety, and clean architecture patterns across the complete development lifecycle.
     </p>
     <p>
-      My expertise includes building and integrating microservices and third-party systems, communicating them via APIs (REST, GQL) or message brokers like Kafka. At the same time, I care about consistently increasing test coverage, optimizing queries, algorithms, and CI flows, and improving legacy code in general.
+      I excel at building and scaling full-stack applications from the ground up, making strategic decisions about modern architectures: microservices communication via REST/GraphQL APIs, real-time features with WebSockets, message queuing with Kafka, and containerized deployments with Docker/Kubernetes. My independent development experience spans the entire DevOps pipeline—from initial architecture design and coding to CI/CD implementation, infrastructure provisioning, and production monitoring.
     </p>
     <p>
-      I have experience working side by side with ML teams, integrating predictive LLM models into real-world applications. Beyond software development, I closely follow advancements in blockchain technology, especially the evolution of Algorand and its approach to scalability and decentralization.
+      Beyond TypeScript, I bring valuable experience in Elixir/Phoenix and Ruby on Rails, having maintained and developed over large codebases. I'm passionate about emerging technologies including blockchain development (Algorand ecosystem) and AI integration, always seeking to leverage cutting-edge tools to solve complex business challenges.
     </p>
   </div>
 );

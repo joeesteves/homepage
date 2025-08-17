@@ -3,12 +3,14 @@ import { Stack } from "../stack";
 
 const description = (
   <div className="section__description">
-    <Stack name="Team player" />
-    <Stack name="Time managment" />
-    <Stack name="Tech leader" />
-    <Stack name="Problem solving" />
-    <Stack name="Critical thinking" />
-    <Stack name="Self learning" />
+    <Stack name="Technical Leadership" />
+    <Stack name="Team Management" />
+    <Stack name="Code Architecture" />
+    <Stack name="Mentoring & Coaching" />
+    <Stack name="Strategic Planning" />
+    <Stack name="Cross-functional Collaboration" />
+    <Stack name="Agile Methodologies" />
+    <Stack name="Performance Optimization" />
   </div>
 );
 export const SectionSoftSkills = () => (

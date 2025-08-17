@@ -3,26 +3,45 @@
   margin: 0 auto;
   padding: 0rem 2rem;
   text-align: center;
+  background: linear-gradient(180deg, rgba(100, 108, 255, 0.02), rgba(97, 218, 251, 0.01));
+  min-height: 100vh;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 2rem 0;
+  
+  .section:first-of-type {
+    margin-top: 2rem;
+  }
 
   .header {
     align-self: center;
 
     h1 {
       margin-bottom: 0.2em;
-      font-weight: 300;
+      font-weight: 600;
+      font-size: 2.5em;
+      background: linear-gradient(135deg, #646cff, #61dafb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     h5 {
-      color: #888;
+      color: #b8b8b8;
       font-family: monospace;
       font-variant: small-caps;
-      /* Converts text to lowercase */
+      font-weight: 500;
+      margin: 0.3em 0;
+      
+      &:first-of-type {
+        color: #646cff;
+        font-size: 1.1em;
+        font-weight: 600;
+      }
     }
 
     .logo {
@@ -57,13 +76,14 @@
       gap: 1em;
 
       a {
-        color: #888;
+        color: #b8b8b8;
         text-decoration: none;
+        font-size: 1.3em;
       }
 
       a:hover {
-        filter: brightness(0.5);
-        transition: filter 300ms;
+        color: #646cff;
+        transition: color 300ms;
       }
     }
   }
@@ -84,6 +104,48 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.8em;
+      
+      .leadership-highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        width: 100%;
+        
+        .leadership-item {
+          border-left: 3px solid #61dafb;
+          padding-left: 1em;
+          margin-left: 0.5em;
+          
+          h4 {
+            color: #61dafb;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            font-size: 1.1em;
+          }
+          
+          p {
+            color: #e5e5e5;
+            line-height: 1.6;
+            margin: 0;
+          }
+        }
+      }
+      
+      // Enhanced styling for profile section paragraphs
+      p {
+        line-height: 1.7;
+        margin-bottom: 1.2em;
+        color: #f0f0f0;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        strong {
+          color: #61dafb;
+          font-weight: 600;
+        }
+      }
     }
 
     .stack-badge {
@@ -93,11 +155,19 @@
       align-items: center;
       gap: 0.6em;
       font-size: 1em;
-      font-weight: 350;
+      font-weight: 500;
       border-radius: 0.7em;
-      border: 1px solid rgba(120, 120, 120, 0.3);
+      border: 1px solid rgba(100, 108, 255, 0.4);
       padding: 0.5em 0.8em;
-      background-color: rgba(120, 120, 120, 0.1);
+      background: linear-gradient(135deg, rgba(100, 108, 255, 0.15), rgba(97, 218, 251, 0.15));
+      color: #f5f5f5;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(100, 108, 255, 0.2);
+        border-color: rgba(100, 108, 255, 0.5);
+      }
 
       img {
         height: 1.2em;
@@ -111,6 +181,115 @@
       gap: 1em;
       margin-top: 1em;
       margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      border-bottom: 2px solid rgba(97, 218, 251, 0.3);
+      
+      .section__title {
+        h2 {
+          color: #ffffff;
+          font-weight: 600;
+          margin: 0;
+        }
+        
+        h3 {
+          color: #f5f5f5;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+      
+      svg {
+        color: #61dafb;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+// Light mode overrides
+@media (prefers-color-scheme: light) {
+  #root {
+    background: linear-gradient(180deg, rgba(100, 108, 255, 0.05), rgba(97, 218, 251, 0.03));
+  }
+
+  .main-container {
+    .header {
+      h1 {
+        background: linear-gradient(135deg, #4c54d8, #1a9bd8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      h5 {
+        color: #666;
+        
+        &:first-of-type {
+          color: #4c54d8;
+        }
+      }
+
+      .header__social-links a {
+        color: #666;
+        
+        &:hover {
+          color: #4c54d8;
+        }
+      }
+    }
+
+    .section {
+      .section__description {
+        .leadership-highlights {
+          .leadership-item {
+            border-left-color: #1a9bd8;
+            
+            h4 {
+              color: #1a9bd8;
+            }
+            
+            p {
+              color: #333;
+            }
+          }
+        }
+        
+        p {
+          color: #2a2a2a !important;
+          
+          strong {
+            color: #1a9bd8 !important;
+          }
+        }
+      }
+
+      .stack-badge {
+        background: linear-gradient(135deg, rgba(100, 108, 255, 0.1), rgba(97, 218, 251, 0.1));
+        border-color: rgba(100, 108, 255, 0.3);
+        color: #2a2a2a;
+        
+        &:hover {
+          box-shadow: 0 4px 12px rgba(100, 108, 255, 0.15);
+        }
+      }
+
+      .section__header {
+        border-bottom-color: rgba(100, 108, 255, 0.2);
+        
+        .section__title {
+          h2 {
+            color: #2a2a2a;
+          }
+          
+          h3 {
+            color: #333;
+          }
+        }
+        
+        svg {
+          color: #1a9bd8;
+        }
+      }
     }
   }
 }
@@ -118,6 +297,191 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+// Print styles - optimized for US Legal (8.5" x 14")
+@media print {
+  #root {
+    max-width: none;
+    padding: 0.5in;
+    margin: 0;
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .main-container {
+    padding: 0;
+    
+    .header {
+      margin-bottom: 1.5rem;
+      
+      h1 {
+        background: none !important;
+        -webkit-text-fill-color: #000 !important;
+        color: #000 !important;
+        font-size: 1.6rem;
+      }
+
+      h5 {
+        color: #333 !important;
+        
+        &:first-of-type {
+          color: #000 !important;
+          font-weight: bold;
+        }
+      }
+
+      .header__social-links {
+        display: none;
+      }
+    }
+
+    .section {
+      margin-bottom: 1.2rem;
+      
+      // Summary section stays on page 1
+      &:first-of-type {
+        page-break-after: always;
+        break-after: page;
+        margin-bottom: 0; // No extra margin before page break
+      }
+      
+      // Leadership section can break if needed to leave room for Hard Skills
+      &:nth-of-type(1) {
+        page-break-inside: auto;
+        break-inside: auto;
+        page-break-after: auto;
+        break-after: auto;
+      }
+      
+      // Hard Skills - keep the entire section together (Programming Languages + Frameworks + Other Tools)
+      &:nth-of-type(2) {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        page-break-before: auto;
+        break-before: auto;
+        
+        // Subsections within Hard Skills should definitely stay together
+        .section {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+          page-break-before: avoid !important;
+          break-before: avoid !important;
+          margin-bottom: 1rem;
+        }
+        
+        // Ensure the entire Hard Skills description container stays together
+        .section__description {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+        }
+      }
+      
+      // Soft Skills should stay together
+      &:nth-of-type(4) {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .section__description {
+        padding-left: 0.5rem;
+        gap: 0.6rem;
+        
+        .leadership-highlights {
+          gap: 1rem;
+          
+          .leadership-item {
+            border-left: 2px solid #333 !important;
+            padding-left: 1rem;
+            margin-left: 0.4rem;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            
+            h4 {
+              color: #000 !important;
+              font-size: 0.95rem;
+              margin-bottom: 0.3rem;
+            }
+            
+            p {
+              color: #333 !important;
+              font-size: 0.85rem;
+              line-height: 1.4;
+            }
+          }
+        }
+        
+        p {
+          color: #333 !important;
+          line-height: 1.5;
+          margin-bottom: 0.8rem;
+          font-size: 0.9rem;
+          
+          strong {
+            color: #000 !important;
+          }
+        }
+      }
+
+      .stack-badge {
+        background: #f5f5f5 !important;
+        border: 1px solid #ccc !important;
+        color: #333 !important;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+        padding: 0.3em 0.6em;
+        
+        img {
+          height: 1rem !important;
+          width: auto !important;
+          filter: grayscale(100%) !important;
+        }
+      }
+
+      .section__header {
+        border-bottom: 1px solid #333 !important;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.3rem;
+        
+        .section__title {
+          h2 {
+            color: #000 !important;
+            font-size: 1.1rem;
+            margin: 0;
+          }
+          
+          h3 {
+            color: #333 !important;
+            font-size: 0.9rem;
+            margin: 0;
+          }
+        }
+        
+        svg {
+          color: #333 !important;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    // Allow leadership items to break between pages if needed
+    .leadership-highlights .leadership-item {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-bottom: 0.8rem;
+      
+      &:not(:last-child) {
+        page-break-after: auto;
+        break-after: auto;
+      }
+    }
+  }
+
+  // Hide any hover effects and animations
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
 
