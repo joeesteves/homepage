@@ -4,8 +4,8 @@ FROM node:20-alpine AS builder
 # Set the working directory
 WORKDIR /app
 
-# Install pnpm globally
-RUN npm install -g pnpm
+# Install the pnpm version used by the project
+RUN npm install -g pnpm@10.34.5
 
 # Copy package.json and pnpm-lock.yaml before installing dependencies
 COPY package.json pnpm-lock.yaml ./
