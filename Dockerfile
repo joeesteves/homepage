@@ -22,8 +22,13 @@ RUN pnpm build
 # Use the official NGINX Alpine image for serving the built app
 FROM nginx:stable-alpine
 
+ARG COMMIT_SHA=unknown
+
 # Copy built files from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose the exact source revision baked into this image.
+RUN printf '{"status":"ok","commit":"%s"}\n' "$COMMIT_SHA" > /usr/share/nginx/html/health
 
 # Copy custom NGINX config
 COPY nginx.conf /etc/nginx/nginx.conf
