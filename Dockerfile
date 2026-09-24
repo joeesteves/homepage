@@ -1,5 +1,5 @@
 # Use Node.js for building the Vite project
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY . .
 RUN pnpm build
 
 # Use the official NGINX Alpine image for serving the built app
-FROM nginx:1.25-alpine
+FROM nginx:stable-alpine
 
 # Copy built files from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
