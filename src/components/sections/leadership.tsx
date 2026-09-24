@@ -5,7 +5,7 @@ const description = (
     <div className="leadership-highlights">
       <div className="leadership-item">
         <h4>Senior Engineering Leader @ TheRealReal</h4>
-        <p>Leading full-stack development teams using TypeScript, Elixir, and Rails for the inbound flow systems. Architecting scalable e-commerce solutions, implementing microservices, CI/CD pipelines, and mentoring developers across multiple technology stacks and best practices.</p>
+        <p>Leading full-stack development teams using TypeScript, Elixir, and Rails for the inbound flow systems. Architecting scalable e-commerce solutions, implementing microservices and CI/CD pipelines, and mentoring developers across multiple technology stacks and best practices. Managing and orchestrating AI coding agents such as Claude, OpenCode, and Cursor to improve development workflows and team productivity.</p>
       </div>
 
       <div className="leadership-item">

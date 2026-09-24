@@ -14,6 +14,7 @@ const description = (
     <Stack name="Kubernetes" img={k8} />
     <Stack name="Kafka" img={kafka} />
     <Stack name="Redis" img={redis} />
+    <Stack name="AI Agent Orchestration (Claude, OpenCode, Cursor)" />
     <Stack name="Open Source Contributor" img={os} />
   </div>
 );
