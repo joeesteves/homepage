@@ -36,9 +36,13 @@ jobs:
           version: "latest"
 
       - name: Configure Kubeconfig
+        env:
+          KUBECONFIG_CONTENT: ${{ secrets.KUBECONFIG }}
         run: |
           mkdir -p ~/.kube
-          echo "${{ secrets.KUBECONFIG }}" | base64 --decode > ~/.kube/config
+          if ! printf '%s' "$KUBECONFIG_CONTENT" | base64 --decode > ~/.kube/config 2>/dev/null; then
+            printf '%s' "$KUBECONFIG_CONTENT" > ~/.kube/config
+          fi
           chmod 600 ~/.kube/config
 
       - name: Restart Kubernetes Deployment
